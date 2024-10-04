@@ -1,0 +1,122 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.box {
+  background-color: #2196f3;
+  color: #fff;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+}
+
+/* 1. Position: static */
+/* The element follows the normal flow of the page */
+.static-container {
+  background-color: #f0f0f0;
+  height: 100px;
+}
+
+.static-box {
+  /* position: static; */ /* Default position, no need to declare */
+}
+
+/* 2. Position: relative */
+/* The element is positioned relative to its normal position */
+.relative-container {
+  background-color: #f0f0f0;
+  height: 100px;
+}
+
+.relative-box {
+  position: relative;
+  top: 20px;
+  left: 20px;
+}
+
+/* 3. Position: absolute */
+/* The element is removed from the normal flow and positioned relative to the positioned ancestor */
+.absolute-container {
+  position: relative; /* Necessary to be the positioned ancestor */
+  background-color: #f0f0f0;
+  height: 200px;
+}
+
+.absolute-box {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+/* 4. Position: fixed */
+/* The element is positioned relative to the browser window */
+.fixed-container {
+  background-color: #f0f0f0;
+  height: 200px;
+}
+
+.fixed-box {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+/* 5. Position: sticky */
+/* The element behaves as relative until it reaches a point, then becomes fixed */
+.sticky-container {
+  background-color: #f0f0f0;
+  height: 400px;
+  overflow: auto;
+}
+
+.sticky-box {
+  position: sticky;
+  top: 0;
+  background-color: #4caf50;
+}
+
+/* Scrolling content */
+.sticky-container p {
+  margin: 20px;
+}
+
+/* 6. z-index Example */
+/* Controlling the overlapping of elements */
+.z-index-container {
+  position: relative;
+  height: 200px;
+  background-color: #f0f0f0;
+}
+
+.z-index-box1,
+.z-index-box2 {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+}
+
+.z-index-box1 {
+  background-color: #4caf50;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+}
+
+.z-index-box2 {
+  background-color: #f44336;
+  top: 60px;
+  left: 60px;
+  z-index: 2;
+}
